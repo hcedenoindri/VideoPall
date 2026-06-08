@@ -71,7 +71,7 @@
 
     // Get camera and microphone access
     async function init() {
-        localStream = await navigator.mediaDevices.getUserMedia({ video: false, audio: true });
+        localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
         document.getElementById('localVideo').srcObject = localStream;
         localStream.getTracks().forEach(track => pc.addTrack(track, localStream));
     }
